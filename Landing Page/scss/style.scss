@@ -11,16 +11,11 @@ body {
   color: $text-color;
 }
 
-header {
-  height: 80vh;
-  border: 3px solid red;
-}
-
 nav {
+  z-index: 1;
   height: 5rem;
   position: fixed;
   width: 100%;
-  background-color: rgba(white, $alpha: 0);
 
   & ul {
     list-style: none;
@@ -32,6 +27,72 @@ nav {
 
     & li {
       margin-right: 5rem;
+      font-size: 1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header {
+  height: 80vh;
+
+  .header__background {
+    position: inline;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/headerBackground.jpg);
+    /* https://www.pexels.com/photo/backwash-chairs-in-modern-beauty-salon-7195805/ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+  }
+
+  .header__info {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--display {
+      width: 70%;
+      height: 70%;
+      padding-top: 15%;
+      padding-left: 5%;
+      background-color: rgba($color: black, $alpha: 0.4);
+      border-radius: 3rem;
+
+      & * {
+        margin: 1rem 0;
+        font-family: "Dosis";
+      }
+
+      & button {
+        width: 9rem;
+        height: 3rem;
+        background-color: $accent-color;
+        color: $text-color;
+        font-size: 1.25rem;
+        border: none;
+        border-bottom: 2px solid white;
+        border-radius: 10px;
+      }
+
+      & button:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
     }
   }
 }
