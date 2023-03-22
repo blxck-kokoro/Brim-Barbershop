@@ -27,6 +27,7 @@ nav ul li {
   margin-right: 5rem;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: 3px solid rgb(98, 42, 15);
 }
 
 h1 {
@@ -67,10 +68,19 @@ header .header__info--display {
   padding-left: 5%;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 3rem;
+  transform: translateY(-300px);
+  opacity: 0;
+  border: 3px solid rgb(98, 42, 15);
 }
 header .header__info--display * {
   margin: 1rem 0;
   font-family: "Dosis";
+  transform: translateX(-50px);
+  opacity: 0;
+}
+header .header__info--display .show-header-info {
+  transform: translateX(0px);
+  opacity: 1;
 }
 header .header__info--display button {
   width: 9rem;
@@ -84,5 +94,19 @@ header .header__info--display button {
 }
 header .header__info--display button:hover {
   opacity: 0.6;
+  transition: 0s;
   cursor: pointer;
+}
+header .header__info--display--show {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header__info--display--show {
+    transition: 1s;
+  }
+  .show-header-info {
+    transition: 2s;
+  }
 }/*# sourceMappingURL=style.css.map */
