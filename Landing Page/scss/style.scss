@@ -4,6 +4,7 @@
   transform: translateX(0px) !important;
   transform: translateY(0px) !important;
   opacity: 1 !important;
+  filter: blur(0px) !important;
 }
 
 @mixin hide-content($startPosition) {
@@ -11,6 +12,7 @@
     transform: $startPosition;
   }
   opacity: 0;
+  filter: blur(5px);
 }
 
 * {
@@ -83,6 +85,7 @@ header {
 
   .header__background--show {
     opacity: 0.5;
+    filter: blur(0px);
   }
 
   .header__background img {
@@ -127,7 +130,7 @@ header {
       }
 
       & button:hover {
-        opacity: 0.6;
+        opacity: 0.6 !important;
         transition: 0s;
         cursor: pointer;
       }
@@ -136,7 +139,7 @@ header {
 }
 
 section {
-  margin: 9rem 0;
+  margin: 5rem 0;
 }
 
 .aboutUs {
@@ -194,7 +197,15 @@ section {
     transition: 1s;
   }
 
-  .intersection {
+  .intersection:nth-child(1) {
+    transition: 3s;
+  }
+
+  .intersection:nth-child(2) {
     transition: 2s;
+  }
+
+  .intersection:nth-child(3) {
+    transition: 1s;
   }
 }
