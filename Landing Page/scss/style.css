@@ -28,6 +28,12 @@ nav ul li {
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-bottom: 3px solid rgb(98, 42, 15);
+  opacity: 0;
+  transform: translateX(-50px);
+}
+nav ul .navButtons--show {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 h1 {
@@ -45,12 +51,18 @@ header .header__background {
   position: inline;
   height: 100%;
   width: 100%;
-  background-image: url(../images/headerBackground.jpg);
-  /* https://www.pexels.com/photo/backwash-chairs-in-modern-beauty-salon-7195805/ */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0;
+}
+header .header__background--show {
+  opacity: 0.5;
+}
+header .header__background img {
+  height: 100%;
+  width: 100%;
+  /* https://www.pexels.com/photo/backwash-chairs-in-modern-beauty-salon-7195805/ */
 }
 header .header__info {
   position: absolute;
@@ -78,7 +90,7 @@ header .header__info--display * {
   transform: translateX(-50px);
   opacity: 0;
 }
-header .header__info--display .show-header-info {
+header .header__info--display--content--show {
   transform: translateX(0px);
   opacity: 1;
 }
@@ -103,10 +115,16 @@ header .header__info--display--show {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .header__background--show {
+    transition: 3s;
+  }
   .header__info--display--show {
     transition: 1s;
   }
-  .show-header-info {
+  .header__info--display--content--show {
     transition: 2s;
+  }
+  .navButtons--show {
+    transition: 1s;
   }
 }/*# sourceMappingURL=style.css.map */
