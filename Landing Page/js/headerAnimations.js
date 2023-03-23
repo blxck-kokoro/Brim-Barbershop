@@ -13,7 +13,7 @@ function showHeaderBackground() {
 
 function showHeaderInfoDisplay() {
   return new Promise((resolve, reject) => {
-    headerInfoDisplay.classList.add("header__info--display--show");
+    headerInfoDisplay.classList.add("show");
     resolve();
   });
 }
@@ -21,7 +21,7 @@ function showHeaderInfoDisplay() {
 function showHeaderInfoDisplayContent() {
   return new Promise((resolve, reject) => {
     headerInfoDisplay.childNodes.forEach((element) => {
-      element.classList.add("header__info--display--content--show");
+      element.classList.add("show");
       resolve();
     });
   });
@@ -32,7 +32,7 @@ function showNavButtons() {
     let delay = 0;
     navButtons.childNodes.forEach((element) => {
       setTimeout(() => {
-        element.classList.add("navButtons--show");
+        element.classList.add("show");
       }, delay);
       delay += 200;
     });
