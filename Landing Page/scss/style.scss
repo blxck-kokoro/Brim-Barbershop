@@ -148,6 +148,10 @@ section {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
 
+  .intersection {
+    @include hide-content(translateX(-100%));
+  }
+
   &__img {
     /*https://www.pexels.com/photo/backwash-chairs-near-cosmetology-supplies-7195811/*/
     grid-column: 1 / 3;
@@ -177,6 +181,14 @@ section {
   background-color: $text-color;
   color: $secondary-color;
   padding: 3rem 0;
+
+  .intersection {
+    @include hide-content(translateY(-100%));
+  }
+
+  .intersection:nth-child(2) {
+    @include hide-content(translateY(10%));
+  }
 
   &__heading {
     text-align: center;
@@ -223,10 +235,6 @@ section {
   }
 }
 
-.intersection {
-  @include hide-content(translateX(-100%));
-}
-
 .show {
   @include show-content();
 }
@@ -248,15 +256,23 @@ section {
     transition: 1s;
   }
 
-  .intersection:nth-child(1) {
-    transition: 3s;
+  .aboutUs {
+    .intersection:nth-child(1) {
+      transition: 3s;
+    }
+
+    .intersection:nth-child(2) {
+      transition: 2s;
+    }
+
+    .intersection:nth-child(3) {
+      transition: 1s;
+    }
   }
 
-  .intersection:nth-child(2) {
-    transition: 2s;
-  }
-
-  .intersection:nth-child(3) {
-    transition: 1s;
+  .offer {
+    .intersection {
+      transition: 2s;
+    }
   }
 }
