@@ -117,25 +117,25 @@ header {
         margin: 1rem 0;
         @include hide-content(translateX(-50px));
       }
-
-      & button {
-        width: 9rem;
-        height: 3rem;
-        background-color: $accent-color;
-        color: $text-color;
-        font-size: 1.25rem;
-        border: none;
-        border-bottom: 2px solid white;
-        border-radius: 10px;
-      }
-
-      & button:hover {
-        opacity: 0.6 !important;
-        transition: 0s;
-        cursor: pointer;
-      }
     }
   }
+}
+
+button {
+  width: 9rem;
+  height: 3rem;
+  background-color: $accent-color;
+  color: $text-color;
+  font-size: 1.25rem;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 10px;
+}
+
+button:hover {
+  opacity: 0.6 !important;
+  transition: 0s !important;
+  cursor: pointer;
 }
 
 section {
@@ -187,13 +187,38 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 
     &--card {
-      width: 20%;
-      height: 60vh;
-      background-color: $primary-color;
+      width: 20rem;
+      height: 30rem;
+      border: 3px solid $primary-color;
+      background-color: rgba($color: $primary-color, $alpha: 0.5);
       border-radius: 30px;
-      box-shadow: 0px 0px 20px 10px $accent-color;
+      color: $text-color;
+      padding: 2rem;
+      text-align: center;
+      flex-shrink: 0;
+
+      & h3 {
+        border-bottom: 3px solid $accent-color;
+        padding-bottom: 1rem;
+      }
+
+      & ul {
+        height: 90%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        & li {
+          max-width: 100%;
+          overflow-wrap: break-word;
+        }
+      }
     }
   }
 }
