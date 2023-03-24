@@ -34,7 +34,7 @@ window.addEventListener(
     if (scrollValue > window.scrollY) {
       showNavButtons();
 
-      if (width <= 500) {
+      if (width <= 800) {
         navButtons.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
       }
     } else {

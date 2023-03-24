@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   nav ul {
     justify-content: space-evenly;
 
@@ -11,6 +11,43 @@
       align-items: center;
       justify-content: center;
       backdrop-filter: blur(0px);
+    }
+  }
+
+  header {
+    height: 100vh;
+
+    .header__info {
+      width: 100% !important;
+
+      &--display {
+        width: 90% !important;
+        height: 70% !important;
+        padding: 0 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+
+        & * {
+          margin: 0 !important;
+          text-align: center !important;
+        }
+      }
+    }
+  }
+
+  .aboutUs {
+    padding: 0 1rem;
+
+    &__img {
+      grid-column: 1 / 4;
+      height: 20rem;
+      margin-bottom: 3rem;
+    }
+
+    &__description {
+      grid-column: 1 / 4;
     }
   }
 }

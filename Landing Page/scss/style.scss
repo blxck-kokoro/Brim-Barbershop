@@ -113,6 +113,7 @@ header {
       border-radius: 3rem;
       @include hide-content(translateY(-300px));
       border: 3px solid $accent-color;
+      backdrop-filter: blur(3px);
 
       & * {
         margin: 1rem 0;
