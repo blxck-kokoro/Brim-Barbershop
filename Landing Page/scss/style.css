@@ -63,8 +63,7 @@ header .header__background {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 10px solid rgb(98, 42, 15);
-  border-radius: 50%;
+  border-bottom: 3px solid rgb(98, 42, 15);
   background-size: cover;
   transform: -300px;
   opacity: 0;
@@ -232,6 +231,9 @@ section {
   .header__info--display .show {
     transition: 2s;
   }
+  nav ul {
+    transition: 1s;
+  }
   .aboutUs .intersection:nth-child(1) {
     transition: 3s;
   }
@@ -243,5 +245,21 @@ section {
   }
   .offer .intersection {
     transition: 2s;
+  }
+}
+@media (max-width: 500px) {
+  nav ul {
+    justify-content: space-evenly;
+  }
+  nav ul li {
+    font-size: 0.75rem;
+    margin-right: 0;
+    text-align: center;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
   }
 }/*# sourceMappingURL=style.css.map */

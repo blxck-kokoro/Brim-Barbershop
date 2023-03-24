@@ -30,10 +30,17 @@ let scrollValue = 0;
 window.addEventListener(
   "scroll",
   () => {
+    let width = window.innerWidth;
     if (scrollValue > window.scrollY) {
       showNavButtons();
+
+      if (width <= 500) {
+        navButtons.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+      }
     } else {
       hideNavButtons();
+
+      navButtons.style.backgroundColor = "rgba(255, 255, 255, 0)";
     }
     scrollValue = window.scrollY;
   },

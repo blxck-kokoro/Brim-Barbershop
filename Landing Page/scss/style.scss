@@ -79,8 +79,7 @@ header {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 10px solid $accent-color;
-    border-radius: 50%;
+    border-bottom: 3px solid $accent-color;
     background-size: cover;
     @include hide-content(-300px);
   }
@@ -254,6 +253,10 @@ section {
     transition: 2s;
   }
 
+  nav ul {
+    transition: 1s;
+  }
+
   .aboutUs {
     .intersection:nth-child(1) {
       transition: 3s;
@@ -274,3 +277,5 @@ section {
     }
   }
 }
+
+@import "mobile";

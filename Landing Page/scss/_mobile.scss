@@ -1,0 +1,16 @@
+@media (max-width: 500px) {
+  nav ul {
+    justify-content: space-evenly;
+
+    & li {
+      font-size: 0.75rem;
+      margin-right: 0;
+      text-align: center;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(0px);
+    }
+  }
+}
