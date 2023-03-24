@@ -1,8 +1,8 @@
+import { navButtons, showNavButtons } from "./responsiveNav.js";
+
 const header = document.getElementsByTagName("header")[0];
 
 const headerInfoDisplay = document.querySelector(".header__info--display");
-
-const navButtons = document.getElementsByClassName("navButtons")[0];
 
 function showHeaderBackground() {
   return new Promise((resolve, reject) => {
@@ -24,19 +24,6 @@ function showHeaderInfoDisplayContent() {
       element.classList.add("show");
       resolve();
     });
-  });
-}
-
-function showNavButtons() {
-  return new Promise((resolve, reject) => {
-    let delay = 0;
-    navButtons.childNodes.forEach((element) => {
-      setTimeout(() => {
-        element.classList.add("show");
-      }, delay);
-      delay += 200;
-    });
-    resolve();
   });
 }
 

@@ -45,7 +45,9 @@ nav {
       font-size: 1rem;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       border-bottom: 3px solid $accent-color;
+      backdrop-filter: blur(10px);
       @include hide-content(translateX(-50px));
+      transition: 1s;
     }
   }
 }
@@ -250,10 +252,6 @@ section {
 
   .header__info--display .show {
     transition: 2s;
-  }
-
-  .navButtons .show {
-    transition: 1s;
   }
 
   .aboutUs {
